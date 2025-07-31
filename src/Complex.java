@@ -15,6 +15,10 @@ public class Complex {
         return imag;
     }
 
+    public Complex getConj() {
+        return new Complex(getReal(), -getImag());
+    }
+
     public static Complex[] onesRoots(int count) {
         Complex[] res = new Complex[count];
         for (int i = 0; i < count; i++) {
