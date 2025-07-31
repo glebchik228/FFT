@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
 public class Polynom {
-    private int deg;
-    private double[] coef;
+    private final int deg;
+    private final double[] coef;
 
     public Polynom(double... coef) {
         this.coef = Arrays.copyOf(coef, coef.length);

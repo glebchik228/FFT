@@ -1,6 +1,6 @@
 public class Complex {
-    private double real;
-    private double imag;
+    private final double real;
+    private final double imag;
 
     public Complex(double real, double imag) {
         this.real = real;
@@ -23,14 +23,6 @@ public class Complex {
         Complex[] res = new Complex[count];
         for (int i = 0; i < count; i++) {
             res[i] = new Complex(Math.cos(2 * Math.PI * i / count), Math.sin(2 * Math.PI * i / count));
-        }
-        return res;
-    }
-
-    public static Complex[] foo(int count) {
-        Complex[] res = new Complex[count];
-        for (int i = 0; i < count; i++) {
-            res[i] = Complex.multiply(new Complex(Math.cos(-2 * Math.PI * i / count), Math.sin(-2 * Math.PI * i / count)), new Complex((double) 1 / count, 0));
         }
         return res;
     }
